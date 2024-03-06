@@ -1,0 +1,50 @@
+<!-- <app-full-layout></app-full-layout> -->
+<body>
+  <mat-card>
+    <b style="padding: 20px;"><span>Dashboard</span></b>
+  </mat-card>
+  <br />
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2 class="title">Total Category:</h2>
+          <h1 class="title">{{ data?.danhMucSanPham }}</h1>
+          <p>
+            <button class="button" [routerLink]="['/cafe/danhMucSanPham']">
+              View Category
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2 class="title">Total Product:</h2>
+            <h1 class="title">{{ data?.sanPham }}</h1>
+            <p>
+              <button class="button" [routerLink]="['/cafe/sanPham']">
+                View Product
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2 class="title">Total Order:</h2>
+            <h1 class="title">{{ data?.donHang }}</h1>
+            <p>
+              <button class="button" [routerLink]="['/cafe/donHang']">
+                View Order
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</body>

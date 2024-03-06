@@ -1,0 +1,33 @@
+.intro-section{
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 70%; 
+    height: 70%;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 15px 30px; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: #45a049; 
+  }
+  h1{
+    font-family:Times;
+    color: palevioletred;
+  }

@@ -1,0 +1,62 @@
+<mat-card>
+    <section style="display: flex; justify-content: space-between; align-items: center;">
+        <b><span>Quản lý đơn hàng</span></b>
+    </section>
+</mat-card>
+<hr>
+<mat-card>
+    <mat-form-field [appearance]="'fill'">
+        <mat-label>Tìm kiếm</mat-label>
+        <input matInput (keyup)="applyFilter($event)" #input>
+    </mat-form-field>
+</mat-card>
+<hr>
+
+<mat-card>
+<div class="responsive_table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="hoTen">
+            <th mat-header-cell *matHeaderCellDef>Họ Tên</th>
+            <td mat-cell *matCellDef="let element">{{element.hoTen}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="diaChi">
+            <th mat-header-cell *matHeaderCellDef>Địa Chỉ</th>
+            <td mat-cell *matCellDef="let element">{{element.diaChi}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="sdt">
+            <th mat-header-cell *matHeaderCellDef>Số Điện Thoại</th>
+            <td mat-cell *matCellDef="let element">{{element.sdt}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <td mat-cell *matCellDef="let element">{{element.email}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tongTien">
+            <th mat-header-cell *matHeaderCellDef>Tổng Tiền</th>
+            <td mat-cell *matCellDef="let element">{{element.tongTien}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="trangThai">
+            <th mat-header-cell *matHeaderCellDef>Trạng Thái</th>
+            <td mat-cell *matCellDef="let element">{{element.trangThai}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef>Delete</th>
+            <td mat-cell *matCellDef="let element; let i = index" class="action-link">
+                <button mat-icon-button color="primary" matTooltip="Edit">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            <mat-slide-toggle (change)="onChange(element.id, $event.checked)" matTooltip="Activate or Deactivate Product" [checked]='element.trangThai'></mat-slide-toggle>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
+        <tr mat-row *matRowDef="let row;columns:displayedColumns;"></tr>
+    </table>
+</div>
+</mat-card>

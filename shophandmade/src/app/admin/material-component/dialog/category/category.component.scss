@@ -1,0 +1,24 @@
+.mat-toolbar {
+    margin: 24px;
+    margin-bottom: 10px;
+    width: auto;
+}
+  
+  // Thiết lập màu nền cho nút close
+  button.mat-dialog-close {
+    background-color: #bebcbd; // Màu accent mặc định của Angular Material
+    color: white;
+  }
+  
+  // Thiết lập màu nền cho nút Save
+  .mat-dialog-actions button.mat-raised-button[color="primary"] {
+    background-color: #4caf50; // Màu green mặc định của Angular Material
+    color: white;
+  }
+  
+  // Thiết lập màu nền cho nút Cancel
+  .mat-dialog-actions button.mat-raised-button[color="warm"] {
+    background-color: #ff5722; // Màu deep orange mặc định của Angular Material
+    color: white;
+  }
+  

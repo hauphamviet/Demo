@@ -1,0 +1,29 @@
+<!-- Phan header cua web,duoc tai su dung, goi ham toggleResponsiveClass() -->
+<header>
+    <div class="topnav" id="myTopnav">
+        <a class="navbar-brand" href="# ">
+            <img width="30px" height="30px"
+            src="\assets\img\facion.png" 
+                alt="Logo" 
+                class="Logo">
+        </a>
+        <a class="nav-link " href="#">Trang chủ</a>
+        <a class="nav-link " href="#">Sản phẩm</a>
+        <a class="nav-link" href="#">
+            <i class="fas fa-shopping-cart icon"></i>
+            Giỏ hàng
+        </a>
+        <a class="nav-link" href="#">
+            <i class="fas fa-heart icon"></i>
+           
+            Sản phẩm yêu thích
+        </a>
+        <a class="nav-link"(click)="handleLoginAction()">Đăng nhập</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon">&#9776;</a>
+        <ul>
+            <li>
+                <a (click)="handleSignupAction()">Dang ky</a>
+            </li>
+        </ul>
+    </div>
+  </header>
